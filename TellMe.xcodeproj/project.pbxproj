@@ -28,7 +28,9 @@
 		55380F4315D02D390044DE9D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55380F4215D02D390044DE9D /* Security.framework */; };
 		55380F4515D02D430044DE9D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55380F4415D02D430044DE9D /* StoreKit.framework */; };
 		55380F4715D02D4E0044DE9D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55380F4615D02D4E0044DE9D /* SystemConfiguration.framework */; };
-		5582C5C915D0151800919461 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5582C5C815D0151800919461 /* LoginViewController.m */; };
+		55380F5615D03FD80044DE9D /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55380F5215D03FD80044DE9D /* libTestFlight.a */; };
+		55380F5715D03FD80044DE9D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55380F5315D03FD80044DE9D /* README.txt */; };
+		55380F5815D03FD80044DE9D /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55380F5415D03FD80044DE9D /* release_notes.txt */; };
 		5582C5CD15D017C600919461 /* Facebook_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 5582C5CC15D017C600919461 /* Facebook_login.png */; };
 		5582C5D115D0196E00919461 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5582C5D015D0196E00919461 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
@@ -70,8 +72,10 @@
 		55380F4215D02D390044DE9D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		55380F4415D02D430044DE9D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		55380F4615D02D4E0044DE9D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		5582C5C715D0151800919461 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Login/LoginViewController.h; sourceTree = "<group>"; };
-		5582C5C815D0151800919461 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Login/LoginViewController.m; sourceTree = "<group>"; };
+		55380F5215D03FD80044DE9D /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		55380F5315D03FD80044DE9D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		55380F5415D03FD80044DE9D /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
+		55380F5515D03FD80044DE9D /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		5582C5CC15D017C600919461 /* Facebook_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook_login.png; sourceTree = "<group>"; };
 		5582C5CF15D0196E00919461 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Home/HomeViewController.h; sourceTree = "<group>"; };
 		5582C5D015D0196E00919461 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Home/HomeViewController.m; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				551D057715D0094D007DEFC4 /* Foundation.framework in Frameworks */,
 				551D057915D0094D007DEFC4 /* CoreGraphics.framework in Frameworks */,
 				55380F3615D02CC70044DE9D /* Parse.framework in Frameworks */,
+				55380F5615D03FD80044DE9D /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,9 +157,9 @@
 		551D057A15D0094D007DEFC4 /* TellMe */ = {
 			isa = PBXGroup;
 			children = (
+				55380F5115D03FD80044DE9D /* TestFlightSDK1.0 */,
 				5582C5CE15D0192B00919461 /* Home */,
 				5582C5CB15D017C600919461 /* Imagens */,
-				5582C5CA15D0152100919461 /* Login */,
 				551D058315D0094D007DEFC4 /* AppDelegate.h */,
 				551D058415D0094D007DEFC4 /* AppDelegate.m */,
 				551D058615D0094D007DEFC4 /* MainStoryboard.storyboard */,
@@ -193,13 +198,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5582C5CA15D0152100919461 /* Login */ = {
+		55380F5115D03FD80044DE9D /* TestFlightSDK1.0 */ = {
 			isa = PBXGroup;
 			children = (
-				5582C5C715D0151800919461 /* LoginViewController.h */,
-				5582C5C815D0151800919461 /* LoginViewController.m */,
+				55380F5215D03FD80044DE9D /* libTestFlight.a */,
+				55380F5315D03FD80044DE9D /* README.txt */,
+				55380F5415D03FD80044DE9D /* release_notes.txt */,
+				55380F5515D03FD80044DE9D /* TestFlight.h */,
 			);
-			name = Login;
+			path = TestFlightSDK1.0;
 			sourceTree = "<group>";
 		};
 		5582C5CB15D017C600919461 /* Imagens */ = {
@@ -293,6 +300,8 @@
 				551D057F15D0094D007DEFC4 /* InfoPlist.strings in Resources */,
 				551D058815D0094D007DEFC4 /* MainStoryboard.storyboard in Resources */,
 				5582C5CD15D017C600919461 /* Facebook_login.png in Resources */,
+				55380F5715D03FD80044DE9D /* README.txt in Resources */,
+				55380F5815D03FD80044DE9D /* release_notes.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +338,6 @@
 			files = (
 				551D058115D0094D007DEFC4 /* main.m in Sources */,
 				551D058515D0094D007DEFC4 /* AppDelegate.m in Sources */,
-				5582C5C915D0151800919461 /* LoginViewController.m in Sources */,
 				5582C5D115D0196E00919461 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +440,7 @@
 		551D05A415D0094D007DEFC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -442,6 +451,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TellMe/Facebook\"",
+					"\"$(SRCROOT)/TellMe/TestFlightSDK1.0\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -451,6 +461,7 @@
 		551D05A515D0094D007DEFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -461,6 +472,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TellMe/Facebook\"",
+					"\"$(SRCROOT)/TellMe/TestFlightSDK1.0\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "LoginViewController.h"
 
 @implementation AppDelegate
 
@@ -19,6 +18,7 @@
     
     [PFFacebookUtils initializeWithApplicationId:@"343094472442122"];
     
+    [TestFlight takeOff:@"4135f84f510032c806f0e8c32e5665dc_Nzk5MjkyMDEyLTA0LTExIDEwOjI5OjE1LjE4MTE3Mg"];
     return YES;
 }
 							
