@@ -61,6 +61,7 @@
 - (void) fazerLoginSeNecessario {
 
     if (![PFUser currentUser]) { // No user logged in
+                
         // Create the log in view controller
         PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
         [logInViewController setDelegate:self]; // Set ourselves as the delegate
@@ -80,7 +81,7 @@
         // Present the log in view controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
     } else {
-        NSLog(@"Username %@ abriu o aplicativo logado",[[PFUser currentUser] username]);
+        NSLog(@"Username %@ iniciou o aplicativo logado",[[PFUser currentUser] username]);
     }
     
     
@@ -88,7 +89,7 @@
 
 - (void) logout {
     
-    NSLog(@"Logout efetuado para o username %@",[[PFUser currentUser] username]);
+    NSLog(@"Logout efetuado com username %@",[[PFUser currentUser] username]);
 
     [PFUser logOut];
     [self fazerLoginSeNecessario];
@@ -114,7 +115,7 @@
 
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     
-    NSLog(@"Login efetuado para o username: %@",[user username]);
+    NSLog(@"Login efetuado com o username: %@",[user username]);
     
     [[PFFacebookUtils facebook] requestWithGraphPath:@"me?fields=email"
                                          andDelegate:self];
@@ -125,7 +126,7 @@
 
 // Sent to the delegate when the log in attempt fails.
 - (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
-    NSLog(@"Failed to log in...");
+    NSLog(@"Login falhou com o erro: %@",error);
 }
 
 #pragma mark - PFSignUpViewControllerDelegate
@@ -158,7 +159,7 @@
 // Sent to the delegate when a PFUser is signed up.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
     
-    NSLog(@"SignUp efetuado para o login: %!",[user username]);
+    NSLog(@"SignUp efetuado para o username: %",[user username]);
     
     [self setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
     [self dismissModalViewControllerAnimated:YES]; 
@@ -166,7 +167,7 @@
 
 // Sent to the delegate when the sign up attempt fails.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didFailToSignUpWithError:(NSError *)error {
-    NSLog(@"Failed to sign up...");
+    NSLog(@"SignUp falhou com o erro: %@",error);
 }
 
 #pragma mark - PF_FBRequestDelegate
